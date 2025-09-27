@@ -2,6 +2,8 @@
 A simple Neovim plugin to manage notes.
 
 ---
+> **Caution:** Use a `.md` file (Markdown) for your `save_path`. This ensures proper formatting and avoids parsing errors.
+---
 
 ## Features
 
@@ -15,23 +17,23 @@ A simple Neovim plugin to manage notes.
 
 ## Installation
 
-Using [lazy.nvim](https://github.com/folke/lazy.nvim):
+```lua
+return {
+	"Ka10kenHQ/dictionary.nvim",
+	opts = {},
+	config = function(_, opts)
+		require("dictionary").setup(opts)
+	end,
+}
+```
+
+## Customize
 
 ```lua
-{
-    dir = "~/dictionary.nvim",
-    opts = {
-        -- Path to save your notes (default: $HOME/my_notes.md)
-        -- save_path = "~/my_notes.md",
-
-        -- Floating window width/height relative to editor
-        -- width_ratio = 0.7,
-        -- height_ratio = 0.5,
-
-        -- Floating window border style
-        -- border = "rounded",
-    },
-    config = function(_, opts)
-        require("dictionary").setup(opts)
-    end,
+opts = {
+   save_path = "$HOME/not_here.md",
+   width_ratio = 0.7,
+   height_ratio = 0.5,
+   border = "rounded
 }
+```
