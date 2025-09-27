@@ -5,6 +5,10 @@ A simple Neovim plugin to manage notes.
 > **Caution:** Use a `.md` file (Markdown) for your `save_path`. This ensures proper formatting and avoids parsing errors.
 ---
 
+
+https://github.com/user-attachments/assets/7bd011df-f2fb-4cb0-b016-3232076997c3
+
+
 ## Features
 
 - Store notes with `Name` and `Description`.
